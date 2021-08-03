@@ -7,7 +7,6 @@ import { InfoPageService } from './services/info-page.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portafolio';
 
-  constructor( public _infoPage: InfoPageService) {}
+  constructor() {}
 }
