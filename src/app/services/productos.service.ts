@@ -20,7 +20,11 @@ export class ProductosService {
         let aux = <InfoItem[]>result;
         this.productos = aux
         this.cargando = false;
-        console.log(this.productos)
       });
   }
+
+  public cargarProductoPorId(id: string) {
+    return this.http.get(`https://portafolio-angular-aa8a8-default-rtdb.firebaseio.com/productos/${id}.json`);
+  }
+
 }
