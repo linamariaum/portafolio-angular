@@ -8,7 +8,8 @@ import { InfoTeam } from '../interfaces/info-team.interface';
 })
 export class InfoPageService {
   info: InfoPage = {};
-  equipo: InfoTeam = {}
+  //equipo: InfoTeam[] = []
+  equipo: any;
   load = false;
 
   constructor( private http: HttpClient) {
