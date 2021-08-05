@@ -8,8 +8,7 @@ import { InfoTeam } from '../interfaces/info-team.interface';
 })
 export class InfoPageService {
   info: InfoPage = {};
-  //equipo: InfoTeam[] = []
-  equipo: any;
+  equipo: InfoTeam[] = []
   load = false;
 
   constructor( private http: HttpClient) {
@@ -23,15 +22,14 @@ export class InfoPageService {
       .subscribe( (result: InfoPage) => {
         this.load = true;
         this.info = result;
-        //console.log(this.info);
       });
   }
 
   private cargarEquipo() {
     this.http.get('https://portafolio-angular-aa8a8-default-rtdb.firebaseio.com/equipo.json')
       .subscribe(result => {
-        this.equipo = result;
-        //console.log(this.equipo);
+        let aux = <InfoTeam[]>result;
+        this.equipo = aux;
       });
   }
 
