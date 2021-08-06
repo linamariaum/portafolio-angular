@@ -14,6 +14,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+# For Run in pre-production : 
+`ng build --prod` creat dist folder
+For this project, we use `npm http-server` -> `npm i -g http-server` 
+Then into the dist folder run the command `http-server`
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
